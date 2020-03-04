@@ -9,12 +9,13 @@
 </style>
 
 <div class="example-wrapper">
-    <h1>About Me {{ controller_name }}! ✅</h1>
+    <h1>insert name! ✅</h1>
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ '/var/www/symfonyproject/src/Controller/LearningVictorController.php'|file_link(0) }}">src/Controller/LearningVictorController.php</a></code></li>
-        <li>Your template at <code><a href="{{ '/var/www/symfonyproject/templates/learning_victor/index.html.twig'|file_link(0) }}">templates/learning_victor/index.html.twig</a></code></li>
-    </ul>
+    <form method="post" action="{{ path('AboutMeController') }}">
+        <label for="first-name">First Name:</label>
+        <input type="text" name="first-name" id="first-name">
+        <input type="submit" value="Submit">
+    </form>
+
 </div>
 {% endblock %}
